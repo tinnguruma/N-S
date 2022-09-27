@@ -57,17 +57,8 @@
                 yy = position.coords.longitude;
             }
 
-            let r = 6378.137;
-            let dis;
-            let fi;
-            if ((xx == 0) || (yy == 0)){
-                dis = null;
-                fi = null;
-            } else {
-                dx = manx - xx
-                dis = r * Math.acos((Math.sin(xx) * Math.sin(yy)) + (Math.cos(manx) * Math.cos(many) * dx))
-                fi = 90 - Math.atan((Math.cos(yy) * Math.tan(many) - Math.sin(yy) * Math.cos(dx)) / Math.sin(dx) )
-            }
+            
+            
 
 
 
@@ -133,6 +124,18 @@
                 
                 var e = document.getElementById("manko-direction");
                 e.style.transform = "rotate(" + d + "deg)";
+
+                let r = 6378.137;
+                let dis;
+                let fi;
+                if ((xx == 0) || (yy == 0)){
+                dis = null;
+                fi = null;
+                } else {
+                dx = manx - xx
+                dis = r * Math.acos((Math.sin(xx) * Math.sin(yy)) + (Math.cos(manx) * Math.cos(many) * dx))
+                fi = 90 - Math.atan((Math.cos(yy) * Math.tan(many) - Math.sin(yy) * Math.cos(dx)) / Math.sin(dx) )
+                }
 
 
 
