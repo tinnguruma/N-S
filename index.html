@@ -119,7 +119,7 @@
                     dis = null;
                     fi = null;
                 } else {
-                    dis = r * Math.acos(Math.sin(xx) * Math.sin(manx) + (Math.cos(xx) * Math.cos(manx) * Math.cos(many - yy) )  );
+                    dis = r * Math.acos(Math.sin(xx*R) * Math.sin(manx*R) + (Math.cos(xx*R) * Math.cos(manx*R) * Math.cos(many*R - yy*R) ));
 
                     let __x1 = yy * R;
                     let __x2 = many * R;
