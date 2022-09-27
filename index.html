@@ -65,6 +65,10 @@
 
             // ジャイロスコープと地磁気をセンサーから取得
             function orientation(event) {
+                let absolute = event.absolute;
+                let alpha = event.alpha;
+                let beta = event.beta;
+                let gamma = event.gamma;
 
                 let degrees;
                 if(os == "iphone") {
