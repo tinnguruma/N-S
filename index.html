@@ -38,6 +38,45 @@
             }
 
 
+
+
+
+
+
+
+            function getlocation() {
+                navigator.geolocation.getCurrentPosition(test2);
+            }
+                                            
+            let xx = 0;
+            let yy = 0;
+            let manx = 26.1992894;
+            let many = 127.6840809;
+            function test2(position) {
+                xx = position.coords.latitude;
+                yy = position.coords.longitude;
+            }
+
+            let r = 6378.137;
+            let dis;
+            let fi;
+            if ((xx == 0) || (yy == 0)){
+                dis = null;
+                fi = null;
+            } else {
+                dx = manx - xx
+                dis = r * Math.acos((Math.sin(xx) * Math.sin(yy)) + (Math.cos(manx) * Math.cos(many) * dx))
+                fi = 90 - Math.atan((Math.cos(yy) * Math.tan(many) - Math.sin(yy) * Math.cos(dx)) / Math.sin(dx) )
+            }
+
+
+
+
+
+
+
+
+
             // ジャイロスコープと地磁気をセンサーから取得
             function orientation(event) {
                 let absolute = event.absolute;
@@ -81,15 +120,28 @@
 
 
 
+
+
+
                 //Where is manko
-                var d = degrees;
-                d = -d + 230;
+                if ((xx == 0) || (yy == 0)){
+                    var d = degrees;
+                    d = -d + 230;
+                } else {
+
+                }
+                
                 var e = document.getElementById("manko-direction");
                 e.style.transform = "rotate(" + d + "deg)";
 
-                
-                
-                
+
+
+
+
+
+
+
+
                 
                 document.querySelector("#direction").innerHTML =
                     direction + " : " + degrees;
@@ -97,6 +149,10 @@
                 document.querySelector("#alpha").innerHTML = alpha;
                 document.querySelector("#beta").innerHTML = beta;
                 document.querySelector("#gamma").innerHTML = gamma;
+                document.querySelector("#xxx").innerHTML = xx;
+                document.querySelector("#yyy").innerHTML = yy;
+                document.querySelector("#dis").innerHTML = dis;
+                document.querySelector("#fi").innerHTML = fi;
             }
 
             // 端末の傾き補正（Android用）
@@ -169,13 +225,18 @@
 
     <body>
         <ul>
-            <input type="button" id="permit" value="許可"/>
-            //<li>【方角】<span id="direction"></span></li>
-            //<li>【absolute】<span id="absolute"></span></li>
-            //<li>【alpha】<span id="alpha"></span></li>
-            //<li>【beta】<span id="beta"></span></li>
-            //<li>【gamma】<span id="gamma"></span></li>
-            //<br>
+            <button onclick="getlocation()">位置情報の許可</button>
+            <input type="button" id="permit" value="ジャイロとか許可"/>
+            <li>【方角】<span id="direction"></span></li>
+            <li>【absolute】<span id="absolute"></span></li>
+            <li>【alpha】<span id="alpha"></span></li>
+            <li>【beta】<span id="beta"></span></li>
+            <li>【gamma】<span id="gamma"></span></li>
+            <li>【緯度】<span id="xxx"></span></li>
+            <li>【経度】<span id="yyy"></span></li>
+            <li>【距離】<span id="dis"></span></li>
+            <li>【角度】<span id="fi"></span></li>
+            <br>
             <br>
             <img id="manko-direction" src="manko-direction.png" /><br>
         </ul>
