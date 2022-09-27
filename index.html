@@ -126,19 +126,16 @@
                 } else {
                     dis = r * Math.acos(  Math.sin(xx) * Math.sin(manx) + (Math.cos(xx) * Math.cos(manx) * Math.cos(many - yy) )  );
 
-                    xx *= R;
-                    yy *= R;
-                    manx *= R;
-                    many *= R;
-                    let _x1 = yy;
-                    let _x2 = many;
-                    let _y1 = xx;
-                    let _y2 = manx;
+                  
+                    let __x1 = yy * R;
+                    let __x2 = many * R;
+                    let __y1 = xx * R;
+                    let __y2 = manx * R;
 
-                    let Δx = _x2 - _x1;
-                    let _y = Math.sin(Δx);
-                    let _x = Math.cos(_y1) * Math.tan(_y2) - Math.sin(_y1) * Math.cos(Δx);
-                    let psi = Math.atan2(_y,_x) / R;
+                    let Δx = __x2 - __x1;
+                    let __y = Math.sin(Δx);
+                    let __x = Math.cos(__y1) * Math.tan(__y2) - Math.sin(__y1) * Math.cos(Δx);
+                    let psi = Math.atan2(__y,__x) / R;
                     if (psi < 0){
                         fi = 360 + psi;
                     } else{
