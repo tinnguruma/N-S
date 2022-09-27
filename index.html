@@ -77,6 +77,19 @@
                     direction = "北西";
                 }
 
+
+
+
+
+                //where is manko
+                var d = degrees;
+                var e = document.getElementById("img1");
+                e.style.transform = "rotate(" + d + "deg)";
+
+                
+                
+                
+                
                 document.querySelector("#direction").innerHTML =
                     direction + " : " + degrees;
                 document.querySelector("#absolute").innerHTML = absolute;
@@ -161,6 +174,9 @@
             <li>【alpha】<span id="alpha"></span></li>
             <li>【beta】<span id="beta"></span></li>
             <li>【gamma】<span id="gamma"></span></li>
+            <br>
+            <br>
+            <img id="manko-direction" src="manko-direction.png" /><br>
         </ul>
     </body>
 </html>
