@@ -33,7 +33,7 @@
                         true
                     );
                 } else{
-                    window.alert("PC未対応サンプル");
+                    window.alert("Not compatible with PCs");
                 }
             }
 
@@ -56,11 +56,6 @@
                 xx = position.coords.latitude;
                 yy = position.coords.longitude;
             }
-
-            
-            
-
-
 
 
 
@@ -90,21 +85,21 @@
                     (degrees > 337.5 && degrees < 360) ||
                     (degrees > 0 && degrees < 22.5)
                 ) {
-                    direction = "北";
+                    direction = "N";
                 } else if (degrees > 22.5 && degrees < 67.5) {
-                    direction = "北東";
+                    direction = "NE";
                 } else if (degrees > 67.5 && degrees < 112.5) {
-                    direction = "東";
+                    direction = "E";
                 } else if (degrees > 112.5 && degrees < 157.5) {
-                    direction = "東南";
+                    direction = "SE";
                 } else if (degrees > 157.5 && degrees < 202.5) {
-                    direction = "南";
+                    direction = "S";
                 } else if (degrees > 202.5 && degrees < 247.5) {
-                    direction = "南西";
+                    direction = "SW";
                 } else if (degrees > 247.5 && degrees < 292.5) {
-                    direction = "西";
+                    direction = "W";
                 } else if (degrees > 292.5 && degrees < 337.5) {
-                    direction = "北西";
+                    direction = "NW";
                 }
 
 
@@ -126,7 +121,6 @@
                 } else {
                     dis = r * Math.acos(  Math.sin(xx) * Math.sin(manx) + (Math.cos(xx) * Math.cos(manx) * Math.cos(many - yy) )  );
 
-                  
                     let __x1 = yy * R;
                     let __x2 = many * R;
                     let __y1 = xx * R;
@@ -157,9 +151,6 @@
                 
                 var e = document.getElementById("manko-direction");
                 e.style.transform = "rotate(" + d + "deg)";
-
-
-
 
 
 
@@ -248,17 +239,19 @@
 
     <body>
         <ul>
-            <button onclick="getlocation()">位置情報の許可</button>
-            <input type="button" id="permit" value="ジャイロとか許可"/>
-            <li>【方角】<span id="direction"></span></li>
+            <h1>Where is Manko?</h1>
+            <h4>This site show you which direction Manko is located.</h4>
+            <button onclick="getlocation()">Get Location</button>
+            <input type="button" id="permit" value="Allow"/>
+            <li>【direction】<span id="direction"></span></li>
             <li>【absolute】<span id="absolute"></span></li>
             <li>【alpha】<span id="alpha"></span></li>
             <li>【beta】<span id="beta"></span></li>
             <li>【gamma】<span id="gamma"></span></li>
-            <li>【緯度】<span id="xxx"></span></li>
-            <li>【経度】<span id="yyy"></span></li>
-            <li>【距離】<span id="dis"></span></li>
-            <li>【角度】<span id="fi"></span></li>
+            <li>【Latitude】<span id="xxx"></span></li>
+            <li>【Longitude】<span id="yyy"></span></li>
+            <li>【distance】<span id="dis"></span></li>
+            <li>【Azimuth】<span id="fi"></span></li>
             <br>
             <br>
             <img id="manko-direction" src="manko-direction.png" /><br>
