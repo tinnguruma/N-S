@@ -1,9 +1,9 @@
-# Where-is-manko
+# Where-is-Manko
 
 This site show whitch direction Manko is rocated.  
 このサイトは、漫湖がどの方向に位置するのかを教えてくれるサイトです。
 
-<https://tinnguruma.github.io/Where-is-manko>
+<https://tinnguruma.github.io/Where-is-Manko>
 
 
 The information shown on this site is rough.  
