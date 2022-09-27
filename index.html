@@ -74,7 +74,6 @@
                 if(os == "iphone") {
                     // webkitCompasssHeading値を採用
                     degrees = event.webkitCompassHeading;
-
                 }else{
                     // deviceorientationabsoluteイベントのalphaを補正
                     degrees = compassHeading(alpha, beta, gamma);
@@ -135,10 +134,7 @@
                     } else{
                         fi = psi;
                     }
-
                 }
-
-
 
 
 
@@ -217,7 +213,6 @@
                 } else {
                     ret = "pc";
                 }
-
                 return ret;
             }
 
@@ -257,22 +252,12 @@
             <br>
             <br>
             <br>
-            <br>
-            <br>
             The information shown on this site is rough.<br>
         For more detailed information,please refer to <br>
         official websites and public institutions.
         <br>
         <br>
         </div>
-        <br>
-        <br>
-        <br>
-        <br>
-            <li>【absolute】<span id="absolute"></span></li>
-            <li>【α】<span id="alpha"></span></li>
-            <li>【β】<span id="beta"></span></li>
-            <li>【γ】<span id="gamma"></span></li>
         <br>
         <br>
     </body>
