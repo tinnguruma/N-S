@@ -124,11 +124,11 @@
 
 
                 //Where is manko
-                if ((xx == 0) || (yy == 0)){
-                    var d = degrees;
+                var d = degrees;
+                if ((xx == 0) || (yy == 0)){            
                     d = -d + 230;
                 } else {
-
+                    d = -d + fi;
                 }
                 
                 var e = document.getElementById("manko-direction");
