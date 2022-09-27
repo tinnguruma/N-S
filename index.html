@@ -74,6 +74,7 @@
                 if(os == "iphone") {
                     // webkitCompasssHeading値を採用
                     degrees = event.webkitCompassHeading;
+
                 }else{
                     // deviceorientationabsoluteイベントのalphaを補正
                     degrees = compassHeading(alpha, beta, gamma);
@@ -134,7 +135,10 @@
                     } else{
                         fi = psi;
                     }
+
                 }
+
+
 
 
 
@@ -155,6 +159,10 @@
                 
                 document.querySelector("#direction").innerHTML =
                     direction + " : " + degrees;
+                document.querySelector("#absolute").innerHTML = absolute;
+                document.querySelector("#alpha").innerHTML = alpha;
+                document.querySelector("#beta").innerHTML = beta;
+                document.querySelector("#gamma").innerHTML = gamma;
                 document.querySelector("#xxx").innerHTML = xx;
                 document.querySelector("#yyy").innerHTML = yy;
                 document.querySelector("#dis").innerHTML = dis;
@@ -209,6 +217,7 @@
                 } else {
                     ret = "pc";
                 }
+
                 return ret;
             }
 
@@ -235,16 +244,22 @@
             <button onclick="getlocation()">Get Location</button>
             <input type="button" id="permit" value="Allow"/>
             <li>【your direction】<span id="direction"></span></li>
+            <li>【absolute】<span id="absolute"></span></li>
+            <li>【α】<span id="alpha"></span></li>
+            <li>【β】<span id="beta"></span></li>
+            <li>【γ】<span id="gamma"></span></li>
             <li>【Latitude】<span id="xxx"></span></li>
             <li>【Longitude】<span id="yyy"></span></li>
             <br>
-            <li>【distance(km)】<span id="dis"></span></li>
+            <li>【distance】<span id="dis"></span></li>
             <li>【Azimuth】<span id="fi"></span></li>
         </ul>
         <br>
         <br>
         <div style="text-align: center">
             <img id="manko-direction" src="manko-direction.png" width="60%" height="60%">
+            <br>
+            <br>
             <br>
             <br>
             <br>
