@@ -119,7 +119,7 @@
                     dis = null;
                     fi = null;
                 } else {
-                    dis = r * Math.acos(  Math.sin(xx) * Math.sin(manx) + (Math.cos(xx) * Math.cos(manx) * Math.cos(many - yy) )  );
+                    dis = r * Math.acos(Math.sin(xx) * Math.sin(manx) + (Math.cos(xx) * Math.cos(manx) * Math.cos(many - yy) )  );
 
                     let __x1 = yy * R;
                     let __x2 = many * R;
@@ -243,21 +243,33 @@
             <h4>This site show you which direction Manko is located.</h4>
             <button onclick="getlocation()">Get Location</button>
             <input type="button" id="permit" value="Allow"/>
-            <li>【direction】<span id="direction"></span></li>
+            <li>【your direction】<span id="direction"></span></li>
             <li>【absolute】<span id="absolute"></span></li>
-            <li>【alpha】<span id="alpha"></span></li>
-            <li>【beta】<span id="beta"></span></li>
-            <li>【gamma】<span id="gamma"></span></li>
+            <li>【α】<span id="alpha"></span></li>
+            <li>【β】<span id="beta"></span></li>
+            <li>【γ】<span id="gamma"></span></li>
             <li>【Latitude】<span id="xxx"></span></li>
             <li>【Longitude】<span id="yyy"></span></li>
+            <br>
             <li>【distance】<span id="dis"></span></li>
             <li>【Azimuth】<span id="fi"></span></li>
-            <br>
-            <br>
-            <div style="text-align: center">
-                <img id="manko-direction" src="manko-direction.png" width="60%" height="60%">
-            </div>
-            <br>
         </ul>
+        <br>
+        <br>
+        <div style="text-align: center">
+            <img id="manko-direction" src="manko-direction.png" width="60%" height="60%">
+            <br>
+            <br>
+            <br>
+            <br>
+            <br>
+            The information shown on this site is rough.<br>
+        For more detailed information,please refer to <br>
+        official websites and public institutions.
+        <br>
+        <br>
+        </div>
+        <br>
+        <br>
     </body>
 </html>
