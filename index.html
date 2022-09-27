@@ -114,7 +114,43 @@
 
 
 
+                
                 //Where is manko
+                const R = Math.PI / 180;
+                let r = 6378.137;
+                let dis;
+                let fi;
+                if ((xx == 0) || (yy == 0)){
+                    dis = null;
+                    fi = null;
+                } else {
+                    dis = r * Math.acos(  Math.sin(xx) * Math.sin(manx) + (Math.cos(xx) * Math.cos(manx) * Math.cos(many - yy) )  );
+
+                    xx *= R;
+                    yy *= R;
+                    manx *= R;
+                    many *= R;
+                    let _x1 = yy;
+                    let _x2 = many;
+                    let _y1 = xx;
+                    let _y2 = manx;
+
+                    let Δx = _x2 - _x1;
+                    let _y = Math.sin(Δx);
+                    let _x = Math.cos(_y1) * Math.tan(_y2) - Math.sin(_y1) * Math.cos(Δx);
+                    let psi = Math.atan2(_y,_x) / R;
+                    if (psi < 0){
+                        fi = 360 + psi;
+                    } else{
+                        fi = psi;
+                    }
+
+                }
+
+
+
+
+
                 var d = degrees;
                 if ((xx == 0) || (yy == 0)){            
                     d = -d + 230;
@@ -124,19 +160,6 @@
                 
                 var e = document.getElementById("manko-direction");
                 e.style.transform = "rotate(" + d + "deg)";
-
-                let r = 6378.137;
-                let dis;
-                let fi;
-                if ((xx == 0) || (yy == 0)){
-                dis = null;
-                fi = null;
-                } else {
-                dx = manx - xx;
-                dis = r * Math.acos((Math.sin(xx) * Math.sin(yy)) + (Math.cos(manx) * Math.cos(many) * Math.cos(dx)));
-                fi = 90 - Math.atan((Math.cos(yy) * Math.tan(many) - Math.sin(yy) * Math.cos(dx)) / Math.sin(dx) );
-                }
-
 
 
 
