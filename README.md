@@ -24,9 +24,20 @@
 位置情報や動作と方向等の情報は一切収集しておりません。  
 全て端末内での処理なので安心してご使用ください。  
 バグ等の報告は<https://twitter.com/ajshooting>までどうぞ  
-また、作成者はこのツールを使って起きた事柄に対して一切の責任を負いません。
+また、作成者はこのツールを使って起きた事柄に対して一切の責任を負いません。  
 
+## Q&A
+Q.1回拒否しちゃったからもう使えない  
+A.キャッシュを削除して許可してください  
 
+Q.Androidで動かん  
+A.Androidよくわからん  
+
+Q.漫湖の位置違くね？  
+A.じゃぁどうすればいいのさ  
+
+-------------------------------------------------------
+-------------------------------------------------------
 
 
 
@@ -58,3 +69,13 @@ Please report bugs, etc. to <https://twitter.com/ajshooting>
 In addition, the creator assumes no responsibility for any matter arising from the use of this tool.  
 
 (Manko is the name of a lake in Okinawa, Japan.)
+
+## Q&A
+Q.I rejected it once, so I can't use it anymore.  
+A.Please delete the cache and allow it.  
+
+Q.It doesn't work on Android.  
+A.I don't understand Android.  
+
+Q.The location of manko is wrong, isn't it?  
+A.What should I do then?  
