@@ -1,6 +1,8 @@
 # Where-is-Manko
 
-<https://tinnguruma.github.io/Where-is-Manko>    
+
+__<https://tinnguruma.github.io/Where-is-Manko>__  
+
 
 ## 概要
 このサイトは、漫湖がどの方向に位置するのかを教えてくれるサイトです。  
