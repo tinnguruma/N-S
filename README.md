@@ -8,10 +8,6 @@ __<https://tinnguruma.github.io/Where-is-Manko>__
 このサイトは、漫湖がどの方向に位置するのかを教えてくれるサイトです。  
 (PCには対応しておりません。)  
 
-本サイトに掲載されている情報は概算です。  
-より詳細な情報については  
-公式サイトや公的機関などをご覧ください。 
-
 ## 使用方法
 サイトを開き、画面上部の[Allow]ボタンを押し、動作と方向を許可します。  
 その後、漫湖を示す矢印がコンパスのように動くのを確認した後、[Get Location]を押して、  
@@ -25,6 +21,9 @@ __<https://tinnguruma.github.io/Where-is-Manko>__
 ## その他
 位置情報や動作と方向等の情報は一切収集しておりません。  
 全て端末内での処理なので安心してご使用ください。  
+本サイトに掲載されている情報は概算です。  
+より詳細な情報については  
+公式サイトや公的機関などをご覧ください。 
 バグ等の報告は<https://twitter.com/ajshooting>までどうぞ  
 また、作成者はこのツールを使って起きた事柄に対して一切の責任を負いません。  
 
@@ -48,10 +47,6 @@ A.じゃぁどうすればいいのさ
 This site tells you in which direction Manko is located.  
 (PCs are not supported.)  
 
-The information on this website is approximate.  
-For more detailed information   
-please visit official websites and public institutions.  
-
 ## How to use
 Open the site and press the [Allow] button at the top of the screen   
 to allow movement and direction.  
@@ -67,6 +62,9 @@ and the distance and azimuth to Manko will change.
 ## Other
 We do not collect any information such as location, movement and direction.  
 All processing is done within the terminal, so please use with confidence.   
+The information on this website is approximate.  
+For more detailed information   
+please visit official websites and public institutions.  
 Please report bugs, etc. to <https://twitter.com/ajshooting>   
 In addition, the creator assumes no responsibility for any matter arising from the use of this tool.  
 
