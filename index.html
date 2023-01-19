@@ -17,7 +17,6 @@
         // DOM構築完了イベントハンドラ登録
         window.addEventListener("DOMContentLoaded", init);
 
-        init();
 
         // 初期化
         function init() {
@@ -46,6 +45,13 @@
 
         function getlocation() {
             navigator.geolocation.getCurrentPosition(test2);
+
+            const R = Math.PI / 180;
+            let r = 6378.137;
+            let dis;
+
+            dis = r * Math.acos(Math.sin(xx * R) * Math.sin(manx * R) + (Math.cos(xx * R) * Math.cos(manx * R) * Math.cos(many * R - yy * R)));
+            document.querySelector("#dis").innerHTML = dis;
         }
 
         let xx = 0;
@@ -214,6 +220,7 @@
 
             return ret;
         }
+
 
         // iPhone + Safariの場合はDeviceOrientation APIの使用許可をユーザに求める
         function permitDeviceOrientationForSafari() {
