@@ -69,6 +69,8 @@
             document.querySelector("#xxx").innerHTML = xx;
             document.querySelector("#yyy").innerHTML = yy;
 
+
+
             if (os == "iphone" || os == "iPad") {
                 // safari用。DeviceOrientation APIの使用をユーザに許可して貰う
                 document.querySelector("#permit").addEventListener("click", permitDeviceOrientationForSafari);
@@ -83,9 +85,10 @@
                     orientation,
                     true
                 );
-            } else {
-                window.alert("Not compatible with PCs");
             }
+
+
+
 
         }
 
