@@ -51,25 +51,28 @@
             let dis;
 
             dis = r * Math.acos(Math.sin(xx * R) * Math.sin(manx * R) + (Math.cos(xx * R) * Math.cos(manx * R) * Math.cos(many * R - yy * R)));
-            document.querySelector("#dis").innerHTML = dis;
 
-            if (os == "iphone" || os == "iPad") {
-                // safari用。DeviceOrientation APIの使用をユーザに許可して貰う
-                document.querySelector("#permit").addEventListener("click", permitDeviceOrientationForSafari);
-                window.addEventListener(
-                    "deviceorientation",
-                    orientation,
-                    true
-                );
-            } else if (os == "android") {
-                window.addEventListener(
-                    "deviceorientationabsolute",
-                    orientation,
-                    true
-                );
-            } else {
-                window.alert("Not compatible with PCs");
-            }
+            document.querySelector("#dis").innerHTML = dis;
+            document.querySelector("#xxx").innerHTML = xx;
+            document.querySelector("#yyy").innerHTML = yy;
+
+            //if (os == "iphone" || os == "iPad") {
+            //    // safari用。DeviceOrientation APIの使用をユーザに許可して貰う
+            //    document.querySelector("#permit").addEventListener("click", permitDeviceOrientationForSafari);
+            //    window.addEventListener(
+            //        "deviceorientation",
+            //        orientation,
+            //        true
+            //    );
+            //} else if (os == "android") {
+            //    window.addEventListener(
+            //        "deviceorientationabsolute",
+            //        orientation,
+            //        true
+            //    );
+            //} else {
+            //    window.alert("Not compatible with PCs");
+            //}
 
         }
 
@@ -170,6 +173,7 @@
                 yy = yy.toPrecision(10);
             }
 
+            d = d.toPrecision(10);
             var e = document.getElementById("manko-direction");
             e.style.transform = "rotate( " + d + "deg)";
 
@@ -256,6 +260,9 @@
         }
     </script>
 </head>
+
+
+
 
 <body>
     <ul>
