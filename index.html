@@ -17,7 +17,6 @@
         // DOM構築完了イベントハンドラ登録
         window.addEventListener("DOMContentLoaded", init);
 
-
         // 初期化
         function init() {
             // 簡易的なOS判定
@@ -40,6 +39,20 @@
                 window.alert("Not compatible with PCs");
             }
         }
+
+
+
+
+        let xx = 0;
+        let yy = 0;
+        let manx = 26.1992894;
+        let many = 127.6840809;
+
+        function test2(position) {
+            xx = position.coords.latitude;
+            yy = position.coords.longitude;
+        }
+
 
 
 
@@ -74,16 +87,6 @@
             //    window.alert("Not compatible with PCs");
             //}
 
-        }
-
-        let xx = 0;
-        let yy = 0;
-        let manx = 26.1992894;
-        let many = 127.6840809;
-
-        function test2(position) {
-            xx = position.coords.latitude;
-            yy = position.coords.longitude;
         }
 
 
@@ -168,25 +171,24 @@
             } else {
                 d = -d + fi;
                 d = d.toPrecision(5);
-
-                xx = xx.toPrecision(10);
-                yy = yy.toPrecision(10);
             }
 
-            d = d.toPrecision(10);
+
             var e = document.getElementById("manko-direction");
             e.style.transform = "rotate( " + d + "deg)";
 
 
 
-
-
+            xx = xx.toPrecision(10);
+            yy = yy.toPrecision(10);
+            degrees = degrees.toPrecision(10);
             document.querySelector("#direction").innerHTML =
                 direction + " : " + degrees;
             document.querySelector("#xxx").innerHTML = xx;
             document.querySelector("#yyy").innerHTML = yy;
             document.querySelector("#dis").innerHTML = dis;
             document.querySelector("#fi").innerHTML = fi;
+
         }
 
 
