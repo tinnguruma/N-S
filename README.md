@@ -64,7 +64,6 @@ All processing is done within the terminal, so please use with confidence.
 The information on this website is approximate.  
 For more detailed information   
 please visit official websites and public institutions.  
-Please report bugs, etc. to <https://twitter.com/ajshooting>   
 In addition, the creator assumes no responsibility for any matter arising from the use of this tool.  
 
 (Manko is the name of a lake in Okinawa, Japan.)
